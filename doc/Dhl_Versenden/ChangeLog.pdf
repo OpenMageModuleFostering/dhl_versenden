@@ -23,14 +23,14 @@ endobj
 << /Outlines 10 0 R /PageLabels 11 0 R /PageMode /UseNone /Pages 8 0 R /Type /Catalog >>
 endobj
 7 0 obj
-<< /Author () /CreationDate (D:20161202175323-01'00') /Creator (\(unspecified\)) /Keywords () /Producer (ReportLab PDF Library - www.reportlab.com) /Subject (\(unspecified\)) 
+<< /Author () /CreationDate (D:20170511142527-01'00') /Creator (\(unspecified\)) /Keywords () /Producer (ReportLab PDF Library - www.reportlab.com) /Subject (\(unspecified\)) 
   /Title (DHL Business Customer Shipping) >>
 endobj
 8 0 obj
 << /Count 1 /Kids [ 5 0 R ] /Type /Pages >>
 endobj
 9 0 obj
-<< /Length 2172 >>
+<< /Length 5095 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 q
@@ -51,17 +51,19 @@ q
 1 0 0 1 62.69291 689.3543 cm
 Q
 q
-1 0 0 1 62.69291 653.3543 cm
+1 0 0 1 62.69291 489.3543 cm
 1 1 1 rg
-n 0 36 469.8898 -18 re f*
+n 0 200 469.8898 -18 re f*
 .878431 .878431 .878431 rg
+n 0 182 469.8898 -164 re f*
+1 1 1 rg
 n 0 18 469.8898 -18 re f*
 .960784 .960784 .862745 rg
-n 0 36 469.8898 -18 re f*
+n 0 200 469.8898 -18 re f*
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
-1 0 0 1 6 21 cm
+1 0 0 1 6 185 cm
 q
 .960784 .960784 .862745 rg
 n 0 0 55.12711 12 re f*
@@ -72,7 +74,7 @@ BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL 6.723555 0 Td (Revision) Tj T* -6.723555 0 Td 
 Q
 Q
 q
-1 0 0 1 73.12711 21 cm
+1 0 0 1 73.12711 185 cm
 q
 .960784 .960784 .862745 rg
 n 0 0 55.12711 12 re f*
@@ -83,7 +85,7 @@ BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL 16.72855 0 Td (Date) Tj T* -16.72855 0 Td ET
 Q
 Q
 q
-1 0 0 1 140.2542 21 cm
+1 0 0 1 140.2542 185 cm
 q
 .960784 .960784 .862745 rg
 n 0 0 323.6355 12 re f*
@@ -94,6 +96,213 @@ BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL 134.3128 0 Td (Description) Tj T* -134.3128 0 
 Q
 Q
 0 0 0 rg
+q
+1 0 0 1 6 167 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (1.1.0) Tj T* ET
+Q
+Q
+q
+1 0 0 1 73.12711 167 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (10.05.2017) Tj T* ET
+Q
+Q
+q
+1 0 0 1 140.2542 167 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Features:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 140.2542 161 cm
+Q
+q
+1 0 0 1 140.2542 161 cm
+Q
+q
+1 0 0 1 140.2542 149 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (possibility to add service fee's for preffered Day & Time) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 140.2542 143 cm
+Q
+q
+1 0 0 1 140.2542 131 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL ( ) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 140.2542 127 cm
+Q
+q
+1 0 0 1 140.2542 115 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Bugfixes:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 140.2542 109 cm
+Q
+q
+1 0 0 1 140.2542 109 cm
+Q
+q
+1 0 0 1 140.2542 97 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (missing array key for preferred day) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 140.2542 91 cm
+Q
+q
+1 0 0 1 140.2542 79 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (fix authentication errors not be shown) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 140.2542 73 cm
+Q
+q
+1 0 0 1 140.2542 61 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (fix label creation for partial shipments) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 140.2542 55 cm
+Q
+q
+1 0 0 1 140.2542 43 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (make participation number required) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 140.2542 37 cm
+Q
+q
+1 0 0 1 140.2542 25 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (db prefix will now be recognized) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 140.2542 21 cm
+Q
 q
 1 0 0 1 6 3 cm
 q
@@ -120,20 +329,21 @@ q
 1 j
 0 0 0 RG
 .25 w
+n 0 182 m 469.8898 182 l S
 n 0 18 m 469.8898 18 l S
-n 67.12711 0 m 67.12711 36 l S
-n 134.2542 0 m 134.2542 36 l S
-n 0 36 m 469.8898 36 l S
+n 67.12711 0 m 67.12711 200 l S
+n 134.2542 0 m 134.2542 200 l S
+n 0 200 m 469.8898 200 l S
 n 0 0 m 469.8898 0 l S
-n 0 0 m 0 36 l S
-n 469.8898 0 m 469.8898 36 l S
+n 0 0 m 0 200 l S
+n 469.8898 0 m 469.8898 200 l S
 Q
 Q
 q
-1 0 0 1 62.69291 653.3543 cm
+1 0 0 1 62.69291 489.3543 cm
 Q
 q
-1 0 0 1 62.69291 653.3543 cm
+1 0 0 1 62.69291 489.3543 cm
 Q
 q
 1 0 0 1 411.0236 779.5276 cm
@@ -149,7 +359,7 @@ BT /F1 10 Tf 12 TL ET
 q
 1 0 0 1 6 3 cm
 q
-BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (Stand: 02/12/2016) Tj T* ET
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (Stand: 11/05/2017) Tj T* ET
 Q
 Q
 q
@@ -186,14 +396,14 @@ xref
 0000109509 00000 n
 0000109749 00000 n
 0000109811 00000 n
-0000112039 00000 n
-0000112089 00000 n
-0000112133 00000 n
+0000114962 00000 n
+0000115012 00000 n
+0000115056 00000 n
 trailer
 << /ID 
  % ReportLab generated PDF document -- digest (http://www.reportlab.com)
- [(\)q\261W\234:0'\013\014t\326\327\275 Q) (\)q\261W\234:0'\013\014t\326\327\275 Q)]
+ [(\305\016_\033\225Iy\030Fz-\000~\236\257\261) (\305\016_\033\225Iy\030Fz-\000~\236\257\261)]
  /Info 7 0 R /Root 6 0 R /Size 13 >>
 startxref
-112170
+115093
 %%EOF

@@ -154,6 +154,12 @@ class Dhl_Versenden_Model_Observer
             'shipment_service' => $request->getPost('shipment_service', array()),
             'service_setting'  => $request->getPost('service_setting', array()),
         );
+
+        // Set the billing address mail address as fallback if the shipping address has none
+        if (!$shippingAddress->getData('email')) {
+            $shippingAddress->setData('email', $quote->getBillingAddress()->getData('email'));
+        }
+
         $versendenInfo = $infoBuilder->infoFromSales($shippingAddress, $serviceInfo, $quote->getStoreId());
 
         $shippingAddress->setData('dhl_versenden_info', $versendenInfo);
@@ -396,7 +402,7 @@ class Dhl_Versenden_Model_Observer
             return;
         }
 
-        $unserializeInfo = function(Mage_Customer_Model_Address_Abstract $address) {
+        $unserializeInfo = function (Mage_Customer_Model_Address_Abstract $address) {
             $info = $address->getData('dhl_versenden_info');
             if (!$info || !is_string($info)) {
                 return;
@@ -446,5 +452,82 @@ class Dhl_Versenden_Model_Observer
         $dhlAddressForm = Mage::app()->getLayout()->getBlock('dhl_versenden_form');
         $dhlAddressForm->setDisplayVatValidationButton($origAddressForm->getDisplayVatValidationButton());
         $container->setChild('form', $dhlAddressForm);
+    }
+
+    /**
+     * Add Service fee fo shipping costs.
+     *
+     * @param Varien_Event_Observer $observer
+     *
+     * @return $this
+     * - event: sales_quote_collect_totals_before
+     */
+    public function addServiceFee(Varien_Event_Observer $observer)
+    {
+        /** @var Mage_Sales_Model_Quote $quote */
+        $quote = $observer->getQuote();
+        $shippingAddress = $quote->getShippingAddress();
+        /** @var \Dhl\Versenden\Bcs\Api\Info $dhlVersendenInfo */
+        $dhlVersendenInfo = $shippingAddress->getData('dhl_versenden_info');
+        if ($dhlVersendenInfo == null) {
+            return $this;
+        }
+
+        $serializer = new \Dhl\Versenden\Bcs\Api\Info\Serializer();
+        if (!$dhlVersendenInfo instanceof \Dhl\Versenden\Bcs\Api\Info) {
+            $dhlVersendenInfo = $serializer->unserialize($dhlVersendenInfo);
+        }
+
+        $services = $dhlVersendenInfo->getServices();
+        if ($services->preferredTime || $services->preferredDay) {
+            $store = Mage::app()->getStore($quote->getStoreId());
+            /** @var Dhl_Versenden_Model_Config_Service $config */
+            $config = Mage::getModel('dhl_versenden/config_service');
+            $prefTimeHandlingFee = $services->preferredTime ? $config->getPrefTimeFee($store->getId()) : 0;
+            $prefDayHandlingFee = $services->preferredDay ? $config->getPrefDayFee($store->getId()) : 0;
+
+            $shippingMethod = $shippingAddress->getShippingMethod();
+            list($carrierCode, $method) = explode('_', $shippingMethod, 2);
+
+            $initialPrice = $store->getConfig("carriers/{$carrierCode}/price");
+            $initialFeeType = $store->getConfig("carriers/{$carrierCode}/handling_type");
+            $initialFee = $store->getConfig("carriers/{$carrierCode}/handling_fee");
+
+            if ($initialFeeType === Mage_Shipping_Model_Carrier_Abstract::HANDLING_TYPE_FIXED) {
+                $handlingFee = $prefDayHandlingFee + $prefTimeHandlingFee + $initialFee ;
+            } elseif ($initialFeeType === Mage_Shipping_Model_Carrier_Abstract::HANDLING_TYPE_PERCENT) {
+                $initialFixedFee = ($initialFee / 100) * $initialPrice;
+                $handlingFee =  $initialFixedFee + $prefDayHandlingFee + $prefTimeHandlingFee;
+            } else {
+                $handlingFee =  $prefDayHandlingFee + $prefTimeHandlingFee;
+            }
+
+            /**
+             * Add handling fee , F stands for fixed.
+             */
+            $store->setConfig("carriers/{$carrierCode}/handling_type", 'F');
+            $store->setConfig("carriers/{$carrierCode}/handling_fee", $handlingFee);
+            // needed to re collect shipping incl. fee in all steps
+            $quote->getShippingAddress()->setCollectShippingRates(true);
+        }
+    }
+
+    /**
+     * Reset the dhl versenden info when jumping back in checkout steps.
+     * - event: controller_action_predispatch_checkout_onepage_saveShipping
+     * - event: controller_action_predispatch_checkout_onepage_saveBilling
+     *
+     * @param Varien_Event_Observer $observer
+     *
+     * @return $this
+     */
+    public function resetVersendenInfo(Varien_Event_Observer $observer)
+    {
+        $quote = Mage::getModel('checkout/session')->getQuote();
+        $shippingAddress = $quote->getShippingAddress();
+        $shippingAddress->setData('dhl_versenden_info', null);
+        $shippingAddress->save();
+
+        return $this;
     }
 }

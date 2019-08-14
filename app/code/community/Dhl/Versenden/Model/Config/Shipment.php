@@ -92,7 +92,14 @@ class Dhl_Versenden_Model_Config_Shipment extends Dhl_Versenden_Model_Config
             return false;
         }
 
-        return in_array($shippingMethod, $this->getSettings($store)->getShippingMethods());
+        $configuredMethods = $this->getSettings($store)->getShippingMethods();
+        foreach ($configuredMethods as $method) {
+            if (false !== strpos($shippingMethod, $method)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /**
