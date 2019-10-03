@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Dhl_Versenden",
+    "name": "OpenMageModuleFostering\/Dhl_Versenden",
     "type": "magento-module",
     "license": "OSL3",
     "homepage": "",
     "description": "DHL Versenden",
     "authors": [
-    {
-        "name": "Christoph A\u00dfmann",
-        "email": "christoph.assmann@netresearch.de"
-    }
-],
+        {
+            "name": "Christoph A\u00dfmann",
+            "email": "christoph.assmann@netresearch.de"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
